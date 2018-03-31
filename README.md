@@ -12,5 +12,7 @@ Motion Detection Algorithm
 > - (4) 周期到达时,把当前帧更新为背景帧,取得下一帧图像作为前景帧,返回(3)
 ### 场景变化程度分级
 - **图像变化程度**  根据变化程度采用不同的算法,如对于光线变化程度较大,可以采用**帧间差法**
+
 <div align=center><img src="http://latex.codecogs.com/gif.latex?\sum_{i}\sum_{j}{|f_{current}(x,y)-f_{previous}(x,y)|}"> </img></div>
+
 - **阈值** 根据变化强度,适当选择阈值,计算时可以采用**达到阈值即可退出**的方法
