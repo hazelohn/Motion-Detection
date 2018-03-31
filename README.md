@@ -11,5 +11,5 @@ Motion Detection Algorithm
 > - (3) 依次取出前景图中第 k 个像素点的像素值 q(i,j) 背景图中的第 k 个像素点的像素值 b (i,j)把这两个像素值相减后取绝对值,然后计算所有绝对值之和 如果绝对值之和大于阈值 t, 则说明前两张图像差别较大,判断为出现了空间运动目标;如果绝对值之和小于阈值t,说明前后两张图像无显著变化,可判断为场景中没有出现运动物体.
 > - (4) 周期到达时,把当前帧更新为背景帧,取得下一帧图像作为前景帧,返回(3)
 ### 场景变化程度分级
-- **图像变化程度**  
-<div align=center><img src="http://latex.codecogs.com/gif.latex?\sum_{i}\sum_{j}{|f_{current}(x,y)-f_{previous}(x,y)|}"> </img></div><br>根据变化程度采用不同的算法,如对于光线变化程度较大,可以采用**帧间差法**
+- **图像变化程度**  根据变化程度采用不同的算法,如对于光线变化程度较大,可以采用**帧间差法**
+<div align=center><img src="http://latex.codecogs.com/gif.latex?\sum_{i}\sum_{j}{|f_{current}(x,y)-f_{previous}(x,y)|}"> </img></div>
