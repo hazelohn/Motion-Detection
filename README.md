@@ -4,7 +4,7 @@ Motion Detection Algorithm
 ## 31 March
 ### 空间物体检测
 - **背景更新周期** 间隔一段时间周期,把当前帧更新为背景帧,这样做的好处是提高了算法的运行速度,而且可以把进入场景后静止的物体快速降级为背景
-- **是否有运动物体** 计算同各个点在前景帧和背景帧之间的差值和,判断是否出现了运动目标,该方法适用于*运动物体较少的场景*<br>
+- **是否有运动物体** 计算同各个点在前景帧和背景帧之间的差值和,判断是否出现了运动目标,该方法适用于**运动物体较少的场景**<br>
 > - 算法的实现过程描述如下:
 > - (1) 从 CCD 像机中取得第 1 帧图像作为背景帧,把该帧图像二值化.
 > - (2) 从 CCD 像机中取得第 2 帧图像作为前景图像,把该帧图像二值化.
@@ -12,4 +12,4 @@ Motion Detection Algorithm
 > - (4) 周期到达时,把当前帧更新为背景帧,取得下一帧图像作为前景帧,返回(3)
 ### 场景变化程度分级
 - **图像变化程度**  
-<div align=center><img src="http://latex.codecogs.com/gif.latex?\sum_{i}\sum_{j}{|f_{current}(x,y)-f_{previous}(x,y)|}"> </img></div>
+<div align=center><img src="http://latex.codecogs.com/gif.latex?\sum_{i}\sum_{j}{|f_{current}(x,y)-f_{previous}(x,y)|}"> </img></div><br>根据变化程度采用不同的算法,如对于光线变化程度较大,可以采用**帧间差法**
