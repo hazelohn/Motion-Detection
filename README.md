@@ -42,5 +42,5 @@ Motion Detection Algorithm
 
 - 取差值交集
 
-<div align=center><img src="http://latex.codecogs.com/gif.latex?M_{k-1}="> </img></div>
+<div align=center><img src="http://latex.codecogs.com/gif.latex?M_{k-1}=D_{k}\cap D_{k-1}"> </img></div>
 
