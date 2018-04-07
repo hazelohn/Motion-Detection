@@ -37,6 +37,10 @@ Motion Detection Algorithm
 - 背景点符合RGB空间3维线性
 ### 三帧差法除阴影
 - 三个图像帧做差
+
 <div align=center><img src="http://latex.codecogs.com/gif.latex?\\\left\{\begin{matrix}D_{k}=F_{k}-F_{k-1}\\D_{k-1}=F_{k-1}-F_{k-2}\end{matrix}\right."> </img></div>
+
 - 取差值交集
+
 <div align=center><img src="http://latex.codecogs.com/gif.latex?\M_{k-1}="> </img></div>
+
