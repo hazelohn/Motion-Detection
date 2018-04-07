@@ -26,34 +26,37 @@ Motion Detection Algorithm
 - 针对大部分video/动图，大部分移动的物体仅仅是占据图片的一个区域，如果只对**该区域**及其**周围部分区域**采用背景建模算法，可以进一步提升运算速度。再可以试着利用机器学习进行预测。
 ## 3 April
 ### LBP算子（除阴影） 
-- 差值二值化，阴影部分像素灰度值整体降低
+- 差值二值化，**阴影**部分像素**灰度值整体降低**
 ### 动态信息窗口记录
-- 均值、方差、最近N个采样值、前景点比率等
+- 均值、方差、最近N个采样值、**前景点比率**等
 ### 加速因子
-- 分级更新模型
+- **分级**更新模型
 ### 全局模型
-- 前景点概率与背景点概率，通过一个函数确定当前点为背景点还是前景点
+- 前景点概率与背景点概率，通过一个**函数**确定当前点为背景点还是前景点
 ### 像素点统计规律
-- 背景点符合RGB空间3维线性
+- 背景点符合RGB空间3维**线性**
 ### 三帧差法除阴影
-- 三个图像帧做差
+- **三个图像帧做差**
 
 <div align=center><img src="http://latex.codecogs.com/gif.latex?\\\left\{\begin{matrix}D_{k}=F_{k}-F_{k-1}\\D_{k-1}=F_{k-1}-F_{k-2}\end{matrix}\right."> </img></div>
 
-- 取差值交集
+- **取差值交集**
 
 <div align=center><img src="http://latex.codecogs.com/gif.latex?M_{k-1}=D_{k}\cap%20D_{k-1}"> </img></div>
 
-- 最终结果:
+- **最终结果:**
 
 
 <div align=center><img src="http://latex.codecogs.com/gif.latex?M_{k}=D_{k}-M_{k-1}"> </img></div>
 
 ### 背景模型建立与更新
-- 中值法
+- **中值法**建立背景模型
 
 <div align=center><img src="http://latex.codecogs.com/gif.latex?B(x,y)=median[I_0(x,y),I_1(x,y)...I_N-1(x,y)]"> </img></div>
 
--更新方法
+- **更新方法**
 
-<div align=center><img src="http://latex.codecogs.com/gif.latex?B_n(x,y)=\alpha%20\cdot%20B_{n-1}(x,y)+(1-\alpha%20)\cdot%20I_n(x,y)">
+<div align=center><img src="http://latex.codecogs.com/gif.latex?B_n(x,y)=\alpha%20\cdot%20B_{n-1}(x,y)+(1-\alpha%20)\cdot%20I_n(x,y)"> </img></div>
+
+> - **图像分割更新策略**  还可以采用**分割成8~9块加快处理**
+> - <img src="http://latex.codecogs.com/gif.latex?B_n(x,y)=\alpha%20\cdot%20B_{n-1}(x,y)+(1-\alpha%20)\cdot%20I_n(x,y)"> </img>
