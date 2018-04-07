@@ -35,4 +35,5 @@ Motion Detection Algorithm
 - 前景点概率与背景点概率，通过一个函数确定当前点为背景点还是前景点
 ### 像素点统计规律
 - 背景点符合RGB空间3维线性
-
+### 三帧差法除阴影
+<div align=center><img src="http://latex.codecogs.com/gif.latex?\\\left\{\begin{matrix}D_{k}=F_{k}-F_{k-1}\\D_{k-1}=F_{k-1}-F_{k-2}\end{matrix}\right."> </img></div>
