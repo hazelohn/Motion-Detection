@@ -44,3 +44,8 @@ Motion Detection Algorithm
 
 <div align=center><img src="http://latex.codecogs.com/gif.latex?M_{k-1}=D_{k}\cap%20D_{k-1}"> </img></div>
 
+- 最终结果:
+
+
+<div align=center><img src="http://latex.codecogs.com/gif.latex?M_{k}=D_{k}-M_{k-1}"> </img></div>
+
