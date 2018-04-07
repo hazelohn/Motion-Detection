@@ -59,4 +59,3 @@ Motion Detection Algorithm
 <div align=center><img src="http://latex.codecogs.com/gif.latex?B_n(x,y)=\alpha%20\cdot%20B_{n-1}(x,y)+(1-\alpha%20)\cdot%20I_n(x,y)"> </img></div>
 
 > - **图像分割更新策略**  还可以采用**分割成8~9块加快处理**
-> - <img src="http://latex.codecogs.com/gif.latex?B_n(x,y)=\alpha%20\cdot%20B_{n-1}(x,y)+(1-\alpha%20)\cdot%20I_n(x,y)"> </img>
