@@ -49,3 +49,11 @@ Motion Detection Algorithm
 
 <div align=center><img src="http://latex.codecogs.com/gif.latex?M_{k}=D_{k}-M_{k-1}"> </img></div>
 
+### 背景模型建立与更新
+- 中值法
+
+<div align=center><img src="http://latex.codecogs.com/gif.latex?B(x,y)=median[I_0(x,y),I_1(x,y)...I_N-1(x,y)]"> </img></div>
+
+-更新方法
+
+<div align=center><img src="http://latex.codecogs.com/gif.latex?B_n(x,y)=\alpha%20\cdot%20B_{n-1}(x,y)+(1-\alpha%20)\cdot%20I_n(x,y)">
